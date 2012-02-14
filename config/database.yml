@@ -1,0 +1,14 @@
+common: &common
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  username: captain 
+  password: &Tennille
+
+development:
+  <<: *common
+  database: lb_development
+
+test:
+  <<: *common
+  database: lb_test
