@@ -10,16 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214065420) do
+ActiveRecord::Schema.define(:version => 20120218030249) do
 
   create_table "talents", :force => true do |t|
     t.text     "first_name"
     t.text     "last_name"
     t.text     "city"
     t.text     "state"
-    t.integer  "zip_code"
+    t.text     "zip_code"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "email"
   end
 
 end

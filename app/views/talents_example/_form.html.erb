@@ -1,0 +1,27 @@
+<%= form_for(@talent) do |f| %>
+  <% if @talent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@talent.errors.count, "error") %> prohibited this talent from being saved:</h2>
+
+      <ul>
+      <% @talent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+  = f.label :First_Name
+  = f.text_field :first_name
+  = f.label :Last_Name
+  = f.text_field :last_name
+  = f.label :City
+  = f.text_field :city
+  = f.label :State
+  = f.text_field :state
+  = f.label :Zip_code
+  = f.text_field :zip_code
+    <%= f.submit %>
+  </div>
+<% end %>

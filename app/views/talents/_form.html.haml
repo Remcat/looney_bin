@@ -1,0 +1,16 @@
+= form_for @talent do |f|
+  = f.label :First_Name
+  = f.text_field :first_name
+  = f.label :Last_Name
+  = f.text_field :last_name
+  = f.label :City
+  = f.text_field :city
+  = f.label :State
+  = f.text_field :state
+  = f.label :Zip_code
+  = f.text_field :zip_code
+  = f.label :Email
+  = f.text_field :email
+  = f.submit "Create"
+
+= error_messages_for :talent

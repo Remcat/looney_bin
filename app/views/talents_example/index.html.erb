@@ -1,0 +1,21 @@
+<h1>Listing talents</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @talents.each do |talent| %>
+  <tr>
+    <td><%= link_to 'Show', talent %></td>
+    <td><%= link_to 'Edit', edit_talent_path(talent) %></td>
+    <td><%= link_to 'Destroy', talent, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Talent', new_talent_path %>
